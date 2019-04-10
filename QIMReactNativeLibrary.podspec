@@ -6,7 +6,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
 
   s.name         = "QIMReactNativeLibrary"
-  s.version      = "0.54.1-02"
+  s.version      = "0.54.1-03"
   s.summary      = "Qunar chat App 6.0+ version QIMCommon"
   s.description  = <<-DESC
                    Qunar QIMCommon解决方案
@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig     = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++14" }
 
   s.subspec "yoga" do |yoga|
-    yoga.platforms = { :ios => "8.0", :tvos => "9.2" }
     yoga.header_dir           = "yoga"
     yoga.requires_arc = false
     yoga.compiler_flags = [
@@ -55,13 +54,6 @@ Pod::Spec.new do |s|
                               "ReactCommon/yoga/*",
                               "react-native/React/Cxx*/*",
     ss.ios.exclude_files    = "react-native/React/**/RCTTV*.*"
-    ss.tvos.exclude_files   = "react-native/React/Modules/RCTClipboard*",
-                              "react-native/React/Views/RCTDatePicker*",
-                              "react-native/React/Views/RCTPicker*",
-                              "react-native/React/Views/RCTRefreshControl*",
-                              "react-native/React/Views/RCTSlider*",
-                              "react-native/React/Views/RCTSwitch*",
-                              "react-native/React/Views/RCTWebView*"
     ss.header_dir           = "React"
     ss.framework            = "JavaScriptCore"
     ss.libraries            = "stdc++"
@@ -198,7 +190,6 @@ Pod::Spec.new do |s|
   s.subspec "RNSVG" do |ss|
     ss.source_files     = 'react-native-svg/ios/**/*.{h,m}'
     ss.requires_arc     = true
-    ss.platforms        = { :ios => "8.0", :tvos => "9.2" }
     ss.dependency       'QIMReactNativeLibrary/Core'
   end
 
