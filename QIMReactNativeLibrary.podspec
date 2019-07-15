@@ -6,7 +6,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
 
   s.name         = "QIMReactNativeLibrary"
-  s.version      = "3.0.10211670"
+  s.version      = "3.0.10211671"
   s.summary      = "Qunar chat App 6.0+ version QIMCommon"
   s.description  = <<-DESC
                    Qunar QIMCommon解决方案
@@ -28,7 +28,6 @@ Pod::Spec.new do |s|
 
   s.subspec "yoga" do |yoga|
     yoga.header_dir           = "yoga"
-    yoga.module_name = 'yoga'
     yoga.requires_arc = false
     yoga.compiler_flags = [
     '-fno-omit-frame-pointer',
@@ -207,6 +206,6 @@ Pod::Spec.new do |s|
     ss.dependency       'QIMReactNativeLibrary/Core'
   end
 
-  s.default_subspecs = 'Core', 'CxxBridge', 'DevSupport', 'jschelpers', 'jsinspector', 'PrivateDatabase', 'cxxreact', 'ART', 'RCTActionSheet', 'RCTAnimation', 'RCTBlob', 'RCTGeolocation', 'RCTImage', 'RCTNetwork', 'RCTSettings', 'RCTText', 'RCTVibration', 'RCTWebSocket', 'RCTLinkingIOS', 'RNSVG', 'react-native-image-picker', 'RNVectorIcons' 
+  s.default_subspecs = 'Core', 'CxxBridge', 'DevSupport', 'jschelpers', 'jsinspector', 'PrivateDatabase', 'cxxreact', 'ART', 'RCTActionSheet', 'RCTAnimation', 'RCTBlob', 'RCTGeolocation', 'RCTImage', 'RCTNetwork', 'RCTSettings', 'RCTText', 'RCTVibration', 'RCTWebSocket', 'RCTLinkingIOS', 'RNSVG', 'react-native-image-picker', 'RNVectorIcons', 'yoga'
 
 end
