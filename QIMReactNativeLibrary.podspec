@@ -6,7 +6,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
 
   s.name         = "QIMReactNativeLibrary"
-  s.version      = "3.0.10211669"
+  s.version      = "3.0.10211670"
   s.summary      = "Qunar chat App 6.0+ version QIMCommon"
   s.description  = <<-DESC
                    Qunar QIMCommon解决方案
@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
 
   s.subspec "yoga" do |yoga|
     yoga.header_dir           = "yoga"
+    yoga.module_name = 'yoga'
     yoga.requires_arc = false
     yoga.compiler_flags = [
     '-fno-omit-frame-pointer',
@@ -191,6 +192,7 @@ Pod::Spec.new do |s|
     ss.source_files     = 'react-native-svg/ios/**/*.{h,m}'
     ss.requires_arc     = true
     ss.dependency       'QIMReactNativeLibrary/Core'
+    ss.dependency       'QIMReactNativeLibrary/RCTImage'
   end
 
   s.subspec "react-native-image-picker" do |ss|
