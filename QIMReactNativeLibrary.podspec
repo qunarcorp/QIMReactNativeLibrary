@@ -6,7 +6,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
 
   s.name         = "QIMReactNativeLibrary"
-  s.version      = "3.0.10211613"
+  s.version      = "3.0.10211669"
   s.summary      = "Qunar chat App 6.0+ version QIMCommon"
   s.description  = <<-DESC
                    Qunar QIMCommon解决方案
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.license      = "Copyright 2018 im.qunar.com"
   s.author        = { "Qunar IM" => "qtalk@qunar.com" }
 
-  s.source       = { :git => "https://github.com/qunarcorp/QIMReactNativeLibrary.git", :tag=> s.version.to_s}
+  s.source       = { :git => "git@gitlab.corp.qunar.com:qchat/QIMReactNativeLibrary.git", :tag=> s.version.to_s}
 
   s.ios.deployment_target   = '8.0'
 
