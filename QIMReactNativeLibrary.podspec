@@ -6,7 +6,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
 
   s.name         = "QIMReactNativeLibrary"
-  s.version      = "3.0.10211613"
+  s.version      = "3.0.10211671"
   s.summary      = "Qunar chat App 6.0+ version QIMCommon"
   s.description  = <<-DESC
                    Qunar QIMCommon解决方案
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.license      = "Copyright 2018 im.qunar.com"
   s.author        = { "Qunar IM" => "qtalk@qunar.com" }
 
-  s.source       = { :git => "https://github.com/qunarcorp/QIMReactNativeLibrary.git", :tag=> s.version.to_s}
+  s.source       = { :git => "git@gitlab.corp.qunar.com:qchat/QIMReactNativeLibrary.git", :tag=> s.version.to_s}
 
   s.ios.deployment_target   = '8.0'
 
@@ -191,6 +191,7 @@ Pod::Spec.new do |s|
     ss.source_files     = 'react-native-svg/ios/**/*.{h,m}'
     ss.requires_arc     = true
     ss.dependency       'QIMReactNativeLibrary/Core'
+    ss.dependency       'QIMReactNativeLibrary/RCTImage'
   end
 
   s.subspec "react-native-image-picker" do |ss|
@@ -205,6 +206,6 @@ Pod::Spec.new do |s|
     ss.dependency       'QIMReactNativeLibrary/Core'
   end
 
-  s.default_subspecs = 'Core', 'CxxBridge', 'DevSupport', 'jschelpers', 'jsinspector', 'PrivateDatabase', 'cxxreact', 'ART', 'RCTActionSheet', 'RCTAnimation', 'RCTBlob', 'RCTGeolocation', 'RCTImage', 'RCTNetwork', 'RCTSettings', 'RCTText', 'RCTVibration', 'RCTWebSocket', 'RCTLinkingIOS', 'RNSVG', 'react-native-image-picker', 'RNVectorIcons' 
+  s.default_subspecs = 'Core', 'CxxBridge', 'DevSupport', 'jschelpers', 'jsinspector', 'PrivateDatabase', 'cxxreact', 'ART', 'RCTActionSheet', 'RCTAnimation', 'RCTBlob', 'RCTGeolocation', 'RCTImage', 'RCTNetwork', 'RCTSettings', 'RCTText', 'RCTVibration', 'RCTWebSocket', 'RCTLinkingIOS', 'RNSVG', 'react-native-image-picker', 'RNVectorIcons', 'yoga'
 
 end
