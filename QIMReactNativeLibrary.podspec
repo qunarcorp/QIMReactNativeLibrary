@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.license      = "Copyright 2018 im.qunar.com"
   s.author        = { "Qunar IM" => "qtalk@qunar.com" }
 
-  s.source       = { :git => "git@gitlab.corp.qunar.com:qchat/QIMReactNativeLibrary.git", :tag=> s.version.to_s}
+  s.source       = { :git => "https://github.com/qunarcorp/QIMReactNativeLibrary.git", :tag=> s.version.to_s}
 
   s.ios.deployment_target   = '8.0'
 
