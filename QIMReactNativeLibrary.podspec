@@ -206,6 +206,11 @@ Pod::Spec.new do |s|
     ss.dependency       'QIMReactNativeLibrary/Core'
   end
 
-  s.default_subspecs = 'Core', 'CxxBridge', 'DevSupport', 'jschelpers', 'jsinspector', 'PrivateDatabase', 'cxxreact', 'ART', 'RCTActionSheet', 'RCTAnimation', 'RCTBlob', 'RCTGeolocation', 'RCTImage', 'RCTNetwork', 'RCTSettings', 'RCTText', 'RCTVibration', 'RCTWebSocket', 'RCTLinkingIOS', 'RNSVG', 'react-native-image-picker', 'RNVectorIcons', 'yoga'
+  s.subspec "RNI18n" do |ss|
+    ss.source_files = 'react-native-i18n/ios/**/*.{h,m}'
+    ss.requires_arc = true
+  end
+
+  s.default_subspecs = 'Core', 'CxxBridge', 'DevSupport', 'jschelpers', 'jsinspector', 'PrivateDatabase', 'cxxreact', 'ART', 'RCTActionSheet', 'RCTAnimation', 'RCTBlob', 'RCTGeolocation', 'RCTImage', 'RCTNetwork', 'RCTSettings', 'RCTText', 'RCTVibration', 'RCTWebSocket', 'RCTLinkingIOS', 'RNSVG', 'react-native-image-picker', 'RNVectorIcons', 'RNI18n', 'yoga'
 
 end
